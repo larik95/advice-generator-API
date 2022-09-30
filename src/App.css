@@ -1,38 +1,92 @@
+:root {
+  /* Colors */
+  /* Primary */
+
+  --l-cyan: hsl(193, 38%, 86%);
+  --n-green: hsl(150, 100%, 66%);
+
+  /* Neutral */
+
+  --g-blue: hsl(217, 19%, 38%);
+  --d-g-blue: hsl(217, 19%, 24%);
+  --d-blue: hsl(218, 23%, 16%);
+
+  /* Typography */
+
+  --ff: "Manrope", sans-serif;
+  /* Body Copy */
+
+  --fs-quote: 28px;
+
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fs);
+  background-color: var(--d-blue);
+}
+
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(50%);
+}
+
+.container {
+  background-color: var(--d-g-blue);
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-title {
+  text-transform: uppercase;
+  color: var(--n-green);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-align: center;
+  
+}
+
+.container-advice {
+  color: var(--l-cyan);
+  font-weight: 800;
+  font-size: 18px;
+  padding: 15px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-divider {
+  content: url(../src/desing/pattern-divider-desktop.svg);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-dice {
+  background-color: var(--n-green);
+  width: 50px;
+  height: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 50%;
+  transform: translateY(20px);
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.container-dice:hover {
+  box-shadow: 0px 0px 32px 4px hsl(150, 100%, 66%);  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 700px) {
+  .container {
+    width: 320px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container-divider {
+    content: url(../src/desing/pattern-divider-mobile.svg);
   }
+
 }
